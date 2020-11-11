@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getCountries } from "../../utilities";
+
 const CoutriesItem = ({ InputValue }) => {
   const [countries, updateCountries] = useState([]);
   useEffect(() => {
@@ -7,6 +8,7 @@ const CoutriesItem = ({ InputValue }) => {
       updateCountries(information);
     });
   }, []);
+
   let listOfCountries = countries.map((country) => {
     if (country.name.toUpperCase().includes(InputValue.toUpperCase())) {
       return (
