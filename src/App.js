@@ -1,4 +1,3 @@
-import "./App.css";
 import CountriesHeader from "./components/CountriesHeader/CountriesHeader";
 
 function App() {

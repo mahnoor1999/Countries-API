@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getCountries } from "../../utilities";
+import { getCountries } from "../../service";
 
 const CoutriesItem = ({ InputValue }) => {
   const [countries, updateCountries] = useState([]);
@@ -10,7 +10,9 @@ const CoutriesItem = ({ InputValue }) => {
   }, []);
 
   let listOfCountries = countries.map((country) => {
-    if (country.name.toUpperCase().includes(InputValue.toUpperCase())) {
+    let countryInCapitalCase = country.name.toUpperCase()
+    let inputInCapitalCase = InputValue.toUpperCase()
+    if (countryInCapitalCase.includes(inputInCapitalCase)) {
       return (
         <>
           <div className=" bg-white h-64 rounded-lg hover:bg-gray-200">
