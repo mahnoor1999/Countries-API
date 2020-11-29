@@ -10,9 +10,9 @@ const CoutriesItem = ({ InputValue }) => {
   }, []);
 
   let listOfCountries = countries.map((country) => {
-    let countryInCapitalCase = country.name.toUpperCase()
-    let inputInCapitalCase = InputValue.toUpperCase()
-    if (countryInCapitalCase.includes(inputInCapitalCase)) {
+    let countryInUpperCase = country.name.toUpperCase()
+    let inputInUpperCase = InputValue.toUpperCase()
+    if (countryInUpperCase.includes(inputInUpperCase)) {
       return (
         <>
           <div className=" bg-white h-64 rounded-lg hover:bg-gray-200">
@@ -23,8 +23,8 @@ const CoutriesItem = ({ InputValue }) => {
               <ul className="text-gray-700 text-lg pl-4">
                 <li>
                   {" "}
-                  <span className="font-semibold"> Capital: </span>
-                  {country.capital}
+                  <span className="font-semibold"> Upper: </span>
+                  {country.Upper}
                 </li>
                 <li>
                   {" "}
